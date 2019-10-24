@@ -1,15 +1,28 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import "./styles.css";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import {
+    createStore,
+    applyMiddleware,
+    compose,
+    combineReducers
+} from "redux";
 
-function Index() {
-  return (
-    <div className="Index">
-      <App />
-    </div>
-  );
-}
+import countriesReducer from "./store/reducers/countries";
+import thunk from "redux-thunk";
+import { Provider } from 'react-redux';
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<Index />, rootElement);
+const reducers = combineReducers({
+    countries: countriesReducer
+});
+const store = createStore(reducers, compose(applyMiddleware(thunk)));
+
+ReactDOM.render( <Provider store={store}>
+    < App / > 
+</Provider>, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

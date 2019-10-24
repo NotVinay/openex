@@ -22,7 +22,7 @@ const header = props => {
     <Toolbar>
       <ElevationScroll {...props}>
         <AppBar>
-          <Toolbar>OpenEx</Toolbar>
+          <Toolbar>Open Ex</Toolbar>
         </AppBar>
       </ElevationScroll>
     </Toolbar>

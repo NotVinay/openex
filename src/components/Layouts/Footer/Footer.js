@@ -8,7 +8,7 @@ function Copyright() {
       Get latest exchange rates, every time!
       <br />
       {"Copyright © "}
-      <Link color="inherit">openEx</Link> {new Date().getFullYear()}
+      <Link color="ainherit">openEx</Link> {new Date().getFullYear()}
       {"."}
     </Typography>
   );

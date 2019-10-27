@@ -120,6 +120,7 @@ class ConverterForm extends Component {
             <Grid item xs={12}>
               <Button
                 variant="contained"
+                color="primary"
                 onClick={event =>
                   this.props.conversionHandler(
                     this.state.from,

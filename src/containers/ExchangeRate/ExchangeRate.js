@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Aux from "../../hoc/Aux/Aux":
+import Aux from "../../hoc/Aux/Aux";
 import classes from "./ExchangeRate.module.css";
 import axios from "axios";
 import * as actions from "../../store/actions/index";

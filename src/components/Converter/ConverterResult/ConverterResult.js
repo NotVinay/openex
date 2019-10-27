@@ -2,32 +2,41 @@ import React from "react";
 import Spinner from "../../UI/Spinner/Spinner";
 import Typography from "@material-ui/core/Typography";
 import SnackbarContent from "@material-ui/core/SnackbarContent";
+import { connect } from "react-redux";
+import Aux from "../../../hoc/Aux/Aux";
 
 const converterResult = props => {
-  let result = null;
+  let result = <div></div>;
   if (props.loading) {
     result = <Spinner></Spinner>;
   } else if (props.error) {
-    result = (
-      <SnackbarContent
-        variant="error"
-        message="Error in conversion."
-        action={action}
-      />
-    );
-  } else if (conversionMultiplier && conversionAmount) {
-    result = (
-      <Typography variant="h2" gutterBottom>
-        {props.conversionAmount +
-          " " +
-          props.conversionFrom.currencies[0].code +
-          " = "}{" "}
-        {(props.conversionAmount * props.conversionMultiplier).toFixed(2)}{" "}
-        {" " + props.conversionTo.currencies[0].code}
-      </Typography>
+    return <SnackbarContent variant="error" message="Error in conversion." />;
+  } else if (props.conversionMultiplier && (props.conversionAmount !== null)) {
+    return (
+      <Aux>
+        <Typography variant="h2" gutterBottom>
+          {props.conversionAmount +
+            " " +
+            props.conversionFrom.currencies[0].code +
+            " = "}{" "}
+          {(props.conversionAmount * props.conversionMultiplier).toFixed(2)}{" "}
+          {" " + props.conversionTo.currencies[0].code}
+        </Typography>
+        <Typography variant="subtitle1" gutterBottom>
+          {"1 " +
+            props.conversionFrom.currencies[0].code +
+            " = " +
+            props.conversionMultiplier}
+          {" " + props.conversionTo.currencies[0].code}
+        </Typography>
+        <Typography variant="subtitle2" gutterBottom>
+          All figures are live mid-market rates as published by European Central
+          Bank.
+        </Typography>
+      </Aux>
     );
   }
-  return { result };
+  return result;
 };
 
 const mapStateToProps = state => {
@@ -41,4 +50,7 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(converterResult);
+export default connect(
+  mapStateToProps,
+  null
+)(converterResult);

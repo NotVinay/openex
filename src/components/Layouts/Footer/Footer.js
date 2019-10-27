@@ -4,11 +4,11 @@ import classes from "./Footer.module.css";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography variant="body2" align="center">
       Get latest exchange rates, every time!
       <br />
       {"Copyright © "}
-      <Link color="ainherit">openEx</Link> {new Date().getFullYear()}
+      <Link>OpenEx</Link> {new Date().getFullYear()}
       {"."}
     </Typography>
   );

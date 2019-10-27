@@ -118,8 +118,17 @@ class ConverterForm extends Component {
               </FormControl>
             </Grid>
             <Grid item xs={12}>
-              <Button variant="contained" color="primary">
-                Calculate
+              <Button
+                variant="contained"
+                onClick={event =>
+                  this.props.conversionHandler(
+                    this.state.from,
+                    this.state.to,
+                    this.state.amount
+                  )
+                }
+              >
+                Convert
               </Button>
             </Grid>
           </Grid>

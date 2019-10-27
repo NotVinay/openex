@@ -8,13 +8,14 @@ import {
     compose,
     combineReducers
 } from "redux";
-
+import converterReducer from "./store/reducers/converter";
 import countriesReducer from "./store/reducers/countries";
 import thunk from "redux-thunk";
 import { Provider } from 'react-redux';
 
 const reducers = combineReducers({
-    countries: countriesReducer
+    countries: countriesReducer,
+    converter: converterReducer
 });
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 

@@ -26,8 +26,8 @@ export const fetchCountriesInit = () => {
         dispatch(fetchCountriesStart());
         axios.get(constants.COUNTRIES_API)
             .then(response => {
-                console.log(response.data)
-                dispatch(fetchCountriesSuccess(response.data))
+                const res = response.data.filter(C => constants.SUPPORTED_CURRENCIES.includes(C.currencies[0].code))
+                dispatch(fetchCountriesSuccess(res))
             })
             .catch(error => {
                 console.log("Error in getting the data", error);

@@ -1,4 +1,7 @@
 
+# hidden constants
+/src/const.js
+
 # dependencies
 /node_modules
 /.pnp

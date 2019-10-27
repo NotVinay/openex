@@ -1,5 +1,6 @@
 import * as actionTypes from "./actionTypes";
 import axios from "axios";
+import * as constants from "../../const";
 
 const fetchCountriesSuccess = countries => {
     return {
@@ -23,7 +24,7 @@ const fetchCountriesStart = () => {
 export const fetchCountriesInit = () => {
     return dispatch => {
         dispatch(fetchCountriesStart());
-        axios.get("https://restcountries.eu/rest/v2/all")
+        axios.get(constants.COUNTRIES_API)
             .then(response => {
                 console.log(response.data)
                 dispatch(fetchCountriesSuccess(response.data))

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-
+import Aux from "../../hoc/Aux/Aux":
 import classes from "./ExchangeRate.module.css";
 import axios from "axios";
 import * as actions from "../../store/actions/index";
 import { connect } from "react-redux";
 import ConverterForm from "../../components/Converter/ConverterForm/ConverterForm";
+import ConverterResult from "../../components/Converter/ConverterResult/ConverterResult";
 import { throwStatement } from "@babel/types";
 
 class ExchangeRate extends Component {
@@ -36,13 +37,10 @@ class ExchangeRate extends Component {
       );
     }
     return (
-      <React.Fragment>
-        <ConverterForm
-          countries={this.props.countries}
-          conversionHandler={this.conversionHandler}
-        ></ConverterForm>
-        {result}
-      </React.Fragment>
+        <Aux>
+          <ConverterForm countries={this.props.countries} conversionHandler={this.conversionHandler}></ConverterForm>
+          <ConverterResult/>
+        </Aux>
     );
   }
 }
@@ -50,11 +48,7 @@ class ExchangeRate extends Component {
 const mapStateToProps = state => {
   return {
     countries: state.countries.countries,
-    countriesLoading: state.countries.loading,
-    conversionFrom: state.converter.fromCountry,
-    conversionTo: state.converter.toCountry,
-    conversionAmount: state.converter.amount,
-    conversionMultiplier: state.converter.result
+    countriesLoading: state.countries.loading
   };
 };
 

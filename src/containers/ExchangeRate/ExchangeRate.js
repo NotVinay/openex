@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import Aux from "../../hoc/Aux/Aux";
-import classes from "./ExchangeRate.module.css";
-import axios from "axios";
 import * as actions from "../../store/actions/index";
 import { connect } from "react-redux";
 import ConverterForm from "../../components/Converter/ConverterForm/ConverterForm";
 import ConverterResult from "../../components/Converter/ConverterResult/ConverterResult";
-import { throwStatement } from "@babel/types";
 
 class ExchangeRate extends Component {
   componentDidMount() {

@@ -21,7 +21,7 @@ const header = props => {
   return (
     <Toolbar>
       <ElevationScroll {...props}>
-        <AppBar>
+        <AppBar color="inherit">
           <Toolbar>Open Ex</Toolbar>
         </AppBar>
       </ElevationScroll>

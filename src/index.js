@@ -8,12 +8,12 @@ import countriesReducer from "./store/reducers/countries";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import { purple } from '@material-ui/core/colors';
+import { teal } from '@material-ui/core/colors';
 
 // setting the theme colours
 const theme = createMuiTheme({
   palette: {
-    primary: { main: purple[500] }, // Purple and green play nicely together.
+    primary: { main: teal[400] }, // Purple and green play nicely together.
     secondary: { main: '#11cb5f' }, // This is just green.A700 as hex.
   }
 });

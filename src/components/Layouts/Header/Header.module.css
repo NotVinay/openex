@@ -1,0 +1,21 @@
+.Grow {
+    flex-grow: 1;
+}
+
+.SectionDesktop {
+    display: none;
+}
+
+.SectionMobile {
+    display: flex;
+}
+
+@media only screen and (min-width: 960px) {
+    .SectionDesktop {
+        display: flex;
+    }
+    
+    .SectionMobile {
+        display: none;
+    }
+} 

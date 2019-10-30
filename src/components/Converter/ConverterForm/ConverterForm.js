@@ -9,6 +9,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Button from "@material-ui/core/Button";
 import Avatar from "@material-ui/core/Avatar";
 import * as classes from "./ConverterForm.module.css";
+import SyncAltRoundedIcon from '@material-ui/icons/SyncAltRounded';
 
 class ConverterForm extends Component {
   state = {
@@ -80,7 +81,7 @@ class ConverterForm extends Component {
               </FormControl>
             </Grid>
             <Grid item xs={12} md={2}>
-              to
+              <SyncAltRoundedIcon/>
             </Grid>
             <Grid item xs={12} md={5}>
               <FormControl variant="outlined" className={classes.FormSelect}>

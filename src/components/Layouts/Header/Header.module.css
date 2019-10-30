@@ -1,3 +1,9 @@
+.NavLink {
+    text-decoration: none;
+    color: #484848;
+    margin: 0px 10px;
+}
+
 .Grow {
     flex-grow: 1;
 }

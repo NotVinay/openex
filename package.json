@@ -2,7 +2,7 @@
   "name": "openex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://notvinay.github.io/open-ex",
+  "homepage": "https://notvinay.github.io/openex",
   "dependencies": {
     "@material-ui/core": "^4.5.1",
     "@material-ui/icons": "^4.5.1",

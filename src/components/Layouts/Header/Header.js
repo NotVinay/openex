@@ -8,6 +8,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import logo from "../../../assets/logo.svg";
+import MoreIcon from '@material-ui/icons/MoreVert';
 import classes from "./Header.module.css";
 
 class Header extends Component {
@@ -39,13 +40,38 @@ class Header extends Component {
         onClose={this.handleMobileMenuClose}
       >
         <MenuItem>
-          <NavLink to="/">Converter</NavLink>
+          <NavLink
+            to="/"
+            activeStyle={{
+              color: "#26a69a"
+            }}
+            className={classes.NavLink}
+            exact
+          >
+            Home
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink to="/">Statistics</NavLink>
+          <NavLink
+            to="/converter"
+            activeStyle={{
+              color: "#26a69a"
+            }}
+            className={classes.NavLink}
+          >
+            Converter
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink to="/">About</NavLink>
+          <NavLink
+            to="/about"
+            activeStyle={{
+              color: "#26a69a"
+            }}
+            className={classes.NavLink}
+          >
+            About
+          </NavLink>
         </MenuItem>
       </Menu>
     );
@@ -85,9 +111,6 @@ class Header extends Component {
                 >
                   About
                 </NavLink>
-                {/* <Button color="primary">Converter</Button>
-                <Button color="primary">Statistics</Button>
-                <Button color="primary">About</Button> */}
               </div>
               <div className={classes.SectionMobile}>
                 <IconButton
@@ -97,7 +120,7 @@ class Header extends Component {
                   onClick={this.handleMobileMenuOpen}
                   color="inherit"
                 >
-                  Menu
+                  <MoreIcon />
                 </IconButton>
               </div>
             </Toolbar>

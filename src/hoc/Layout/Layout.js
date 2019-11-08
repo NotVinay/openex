@@ -7,9 +7,7 @@ const layout = props => {
   return (
     <React.Fragment>
       {/* <CssBaseline /> */}
-      <header>
-        <Header />
-      </header>
+      <Header />
       {props.children}
       <Footer />
     </React.Fragment>

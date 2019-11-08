@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Layout from "./hoc/Layout/Layout";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ExchangeRate from "./containers/ExchangeRate/ExchangeRate";
-
 import classes from './App.module.css';
+import Home from "./containers/Home/Home";
 
 class App extends Component {
   render() {
@@ -11,7 +11,8 @@ class App extends Component {
       <Router>
         <div className={classes.App}>
           <Layout>
-            <Route path="/" component={ExchangeRate} />
+            <Route path="/" exact component={Home} />
+            <Route path="/converter" component={ExchangeRate} />
           </Layout>
         </div>
       </Router>

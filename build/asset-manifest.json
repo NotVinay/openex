@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/open-ex/static/css/main.5f2ad4bc.chunk.css",
+    "main.js": "/open-ex/static/js/main.70a856d3.chunk.js",
+    "main.js.map": "/open-ex/static/js/main.70a856d3.chunk.js.map",
+    "runtime-main.js": "/open-ex/static/js/runtime-main.9516ed25.js",
+    "runtime-main.js.map": "/open-ex/static/js/runtime-main.9516ed25.js.map",
+    "static/js/2.817b5add.chunk.js": "/open-ex/static/js/2.817b5add.chunk.js",
+    "static/js/2.817b5add.chunk.js.map": "/open-ex/static/js/2.817b5add.chunk.js.map",
+    "index.html": "/open-ex/index.html",
+    "precache-manifest.14d1f15034678125151612b731e99934.js": "/open-ex/precache-manifest.14d1f15034678125151612b731e99934.js",
+    "service-worker.js": "/open-ex/service-worker.js",
+    "static/css/main.5f2ad4bc.chunk.css.map": "/open-ex/static/css/main.5f2ad4bc.chunk.css.map",
+    "static/media/logo.svg": "/open-ex/static/media/logo.60ec4245.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9516ed25.js",
+    "static/js/2.817b5add.chunk.js",
+    "static/css/main.5f2ad4bc.chunk.css",
+    "static/js/main.70a856d3.chunk.js"
+  ]
+}

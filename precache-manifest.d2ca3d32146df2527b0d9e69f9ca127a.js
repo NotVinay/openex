@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0cecd6b8837951d9864bc188e9a5eb3e",
+    "revision": "efaca60523e3a60a333550388a957ce4",
     "url": "/openex/index.html"
   },
   {
-    "revision": "6974ae4908319fcf483e",
+    "revision": "a13619e354885406c6db",
     "url": "/openex/static/css/main.5f2ad4bc.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/openex/static/js/2.817b5add.chunk.js"
   },
   {
-    "revision": "6974ae4908319fcf483e",
-    "url": "/openex/static/js/main.ddfd8835.chunk.js"
+    "revision": "a13619e354885406c6db",
+    "url": "/openex/static/js/main.2403c6e7.chunk.js"
   },
   {
     "revision": "ddae04cbad219ecd5d52",

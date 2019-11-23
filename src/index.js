@@ -5,27 +5,29 @@ import * as serviceWorker from "./serviceWorker";
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import converterReducer from "./store/reducers/converter";
 import countriesReducer from "./store/reducers/countries";
+import historicalRatesReducer from "./store/reducers/historicalRates";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import { teal } from '@material-ui/core/colors';
+import { teal } from "@material-ui/core/colors";
 
 // setting the theme colours
 const theme = createMuiTheme({
   palette: {
     primary: { main: teal[400] }, // Purple and green play nicely together.
-    secondary: { main: '#11cb5f' }, // This is just green.A700 as hex.
+    secondary: { main: "#11cb5f" } // This is just green.A700 as hex.
   }
 });
 
 const reducers = combineReducers({
   countries: countriesReducer,
-  converter: converterReducer
+  converter: converterReducer,
+  historicalRates: historicalRatesReducer
 });
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
-  <ThemeProvider theme= {theme}>
+  <ThemeProvider theme={theme}>
     <Provider store={store}>
       <App />
     </Provider>

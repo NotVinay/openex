@@ -8,7 +8,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import logo from "../../../assets/logo.svg";
-import MoreIcon from '@material-ui/icons/MoreVert';
+import MoreIcon from "@material-ui/icons/MoreVert";
 import classes from "./Header.module.css";
 
 class Header extends Component {
@@ -64,6 +64,17 @@ class Header extends Component {
         </MenuItem>
         <MenuItem>
           <NavLink
+            to="/historical-rates"
+            activeStyle={{
+              color: "#26a69a"
+            }}
+            className={classes.NavLink}
+          >
+            Historical Rates
+          </NavLink>
+        </MenuItem>
+        <MenuItem>
+          <NavLink
             to="/about"
             activeStyle={{
               color: "#26a69a"
@@ -101,6 +112,15 @@ class Header extends Component {
                   className={classes.NavLink}
                 >
                   Converter
+                </NavLink>
+                <NavLink
+                  to="/historical-rates"
+                  activeStyle={{
+                    color: "#26a69a"
+                  }}
+                  className={classes.NavLink}
+                >
+                  Historical Rates
                 </NavLink>
                 <NavLink
                   to="/about"

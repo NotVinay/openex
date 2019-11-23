@@ -2,21 +2,20 @@ import React, { Component } from "react";
 import Aux from "../../hoc/Aux/Aux";
 import * as actions from "../../store/actions/index";
 import { connect } from "react-redux";
-import ConverterForm from "../../components/Converter/ConverterForm/ConverterForm";
-import ConverterResult from "../../components/Converter/ConverterResult/ConverterResult";
+import HistoricalRatesForm from "../../components/HistoricalRates/HistoricalRatesForm/HistoricalRatesForm";
+import HistoricalRatesResult from "../../components/HistoricalRates/HistoricalRatesResult/HistoricalRatesResult";
 
-class ExchangeRate extends Component {
+class HistoricalRates extends Component {
   componentDidMount() {
     this.props.loadCountries();
   }
 
-  conversionHandler = (from, to, amount) => {
+  historicalRatesHandler = (from, to, view) => {
     const fromCountry = this.props.countries.filter(
       C => C.alpha2Code === from
     )[0];
     const toCountry = this.props.countries.filter(C => C.alpha2Code === to)[0];
-    console.log(fromCountry, toCountry);
-    this.props.convert(fromCountry, toCountry, amount);
+    this.props.fetchHistoricalRates(fromCountry, toCountry, view);
   };
 
   render() {
@@ -37,11 +36,11 @@ class ExchangeRate extends Component {
     }
     return (
       <Aux>
-        <ConverterForm
+        <HistoricalRatesForm
           countries={this.props.countries}
-          conversionHandler={this.conversionHandler}
-        ></ConverterForm>
-        <ConverterResult />
+          historicalRatesHandler={this.historicalRatesHandler}
+        ></HistoricalRatesForm>
+        <HistoricalRatesResult />
       </Aux>
     );
   }
@@ -57,9 +56,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     loadCountries: () => dispatch(actions.fetchCountriesInit()),
-    convert: (from, to, amount) =>
-      dispatch(actions.fetchConversionInit(from, to, amount))
+    fetchHistoricalRates: (from, to, view) =>
+      dispatch(actions.fetchHistoricalRatesInit(from, to, view))
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ExchangeRate);
+export default connect(mapStateToProps, mapDispatchToProps)(HistoricalRates);

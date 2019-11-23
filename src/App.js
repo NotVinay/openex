@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import ExchangeRate from "./containers/ExchangeRate/ExchangeRate";
 import classes from "./App.module.css";
 import Home from "./containers/Home/Home";
+import HistoricalRates from "./containers/HistoricalRates/HistoricalRates";
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
           <Layout>
             <Route path="/" exact component={Home} />
             <Route path="/converter" component={ExchangeRate} />
+            <Route path="/historical-rates" component={HistoricalRates} />
           </Layout>
         </div>
       </Router>

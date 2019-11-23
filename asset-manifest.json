@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/openex/static/css/main.5f2ad4bc.chunk.css",
-    "main.js": "/openex/static/js/main.2403c6e7.chunk.js",
-    "main.js.map": "/openex/static/js/main.2403c6e7.chunk.js.map",
+    "main.css": "/openex/static/css/main.bc9a05c4.chunk.css",
+    "main.js": "/openex/static/js/main.04d6e374.chunk.js",
+    "main.js.map": "/openex/static/js/main.04d6e374.chunk.js.map",
     "runtime-main.js": "/openex/static/js/runtime-main.97be4519.js",
     "runtime-main.js.map": "/openex/static/js/runtime-main.97be4519.js.map",
-    "static/js/2.817b5add.chunk.js": "/openex/static/js/2.817b5add.chunk.js",
-    "static/js/2.817b5add.chunk.js.map": "/openex/static/js/2.817b5add.chunk.js.map",
+    "static/js/2.71d04e1f.chunk.js": "/openex/static/js/2.71d04e1f.chunk.js",
+    "static/js/2.71d04e1f.chunk.js.map": "/openex/static/js/2.71d04e1f.chunk.js.map",
     "index.html": "/openex/index.html",
-    "precache-manifest.d2ca3d32146df2527b0d9e69f9ca127a.js": "/openex/precache-manifest.d2ca3d32146df2527b0d9e69f9ca127a.js",
+    "precache-manifest.0be74a8f7c13b70b419d7b6b9f8a1ef7.js": "/openex/precache-manifest.0be74a8f7c13b70b419d7b6b9f8a1ef7.js",
     "service-worker.js": "/openex/service-worker.js",
-    "static/css/main.5f2ad4bc.chunk.css.map": "/openex/static/css/main.5f2ad4bc.chunk.css.map",
+    "static/css/main.bc9a05c4.chunk.css.map": "/openex/static/css/main.bc9a05c4.chunk.css.map",
     "static/media/logo.svg": "/openex/static/media/logo.60ec4245.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.97be4519.js",
-    "static/js/2.817b5add.chunk.js",
-    "static/css/main.5f2ad4bc.chunk.css",
-    "static/js/main.2403c6e7.chunk.js"
+    "static/js/2.71d04e1f.chunk.js",
+    "static/css/main.bc9a05c4.chunk.css",
+    "static/js/main.04d6e374.chunk.js"
   ]
 }
